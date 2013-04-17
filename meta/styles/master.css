@@ -1,0 +1,87 @@
+/*Styles for digital prototytpes
+Author:   Jason A. Clark
+Version:  flexible layout 1.0 -  April 2013
+----------------------------------------------- */
+/* =global default settings
+----------------------------------------------- */
+* {margin:0;padding:0;}
+* {-moz-box-sizing: border-box;-webkit-box-sizing:border-box;box-sizing: border-box;}
+html {overflow-y:scroll;}
+body {background:#fff;color:#666;font:100%/1.5 'Gill Sans', 'Droid Sans', 'Calibri', 'Lucida Grande', 'Trebuchet MS', 'Helvetica Neue', 'Arial', sans-serif;}
+
+/* =element-specific settings
+----------------------------------------------- */
+h2.mainHeading strong {padding:2px 5px;background-color:#ffff66;}
+
+/* =links
+----------------------------------------------- */
+/* =forms
+----------------------------------------------- */
+form label {cursor:pointer;font-size:1.3em;color:#2b4268;padding:10px 0 0 0;margin:0;}
+fieldset {border:none;}
+input, select, textarea {width:25em;font:1.0em verdana,arial,sans-serif;padding:3px;margin:3px;border:1px solid gray;border-color:#AAA #DDD #DDD #AAA;}
+form#searchbox {margin:5px 0;border-top:1px solid #ccc;border-right:2px solid #ccc;border-bottom:2px solid #ccc;border-left:1px solid #ccc;background-color:#F2F2F2;text-align:center;}
+input:focus {border:1px #000 solid;}
+form#embedForm {margin:0;padding:0;width:100%;}
+form#embedForm label {font-size:.9em;color:#333;padding-top:0;}
+form#embedForm input {width:100%;font-size:.75em;}
+input, select {vertical-align:middle;}
+input.submit {width:10em;font:bold .95em verdana,arial,sans-serif;background:#6A7389;color:#fff;padding:1px 2px;margin:0 0 2px 0;border:1px solid #283043;border-color:#9097A2 #283043 #283043 #9097A2;}
+form#adminForm p.button {padding:5px 0 0 0;}
+/* =global nav pill tabs
+----------------------------------------------- */
+.controls {*zoom: 1;}
+.controls {display:block;float:right;width:auto;margin-top:5px;padding-left:20px;font-size:.8em;}
+.controls a {text-decoration:none;margin-right:2px;margin-top:2px;margin-bottom:2px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:8px 12px;}
+.controls a:hover {text-decoration:underline; background-color: #ddd;}
+/*.controls .active > a, .controls .active > a:hover {color: #ffffff;background-color: #0088cc;}*/
+.controls a.active, .controls a.active > a:hover {text-decoration: none; background-color: #ddd;}
+/* =miscellaneous and special global settings
+----------------------------------------------- */
+#media {font-size: 1.5em;padding: 10px 0 10px 92px;background: transparent url("../img/youtube_logo.png") no-repeat center left;}
+.watch {line-height:16px;background:url("../img/watch.png") 0 50% no-repeat;margin:0;padding-left:20px;}
+.share {line-height:16px;background:url("../img/share.png") 0 50% no-repeat;margin:0;padding-left:20px;}
+.permalink {line-height:16px;background:url("../img/link.png") 0 50% no-repeat;padding-left:20px;}
+.alert {font-weight:bold;font-size:.9em;background: #fff6bf url("../img/exclamation.png") center no-repeat;background-position: 15px 50%; /* x-pos y-pos */text-align: left;padding: 5px 20px 5px 45px;border-top: 2px solid #ffd324;border-bottom: 2px solid #ffd324;}
+.embed {line-height:16px;background:url("../img/cog.png") 0 50% no-repeat;margin:0;padding-left:20px;}
+.expand {line-height:12px;background:url("../img/expand.gif") 0 50% no-repeat;padding-left:16px;}
+.feed {line-height:12px;background:url("../img/feed.gif") 0 50% no-repeat;padding-left:16px;}
+.refresh {line-height:14px;background:url("../img/refresh.gif") 0 50% no-repeat;padding-left:18px;}
+.zip {width:20px;padding:0 23px 0 0;background:url("../img/zip.gif") no-repeat right;}
+/* =contain
+----------------------------------------------- */
+#contain {padding:10px;}
+/* =main
+----------------------------------------------- */
+/* 
+#main ul.grid {float:left;width:100%;min-width:1000px;margin:10px 0 20px 0;padding:0 0 10px 0;list-style:none;text-align:left;overflow:hidden;}
+#main ul.grid li {background-image:none;position:relative;float:left;width:31%;margin:0 20px 0 0;padding:0 0 10px 0;}*/
+
+#main ul.grid {list-style:none; text-align:left; margin: 0;}
+#main ul.grid li {display:inline-block; vertical-align:top; background-image:none; width: 30%; padding: 0 20px 20px 0;}
+#main ul.grid li p {font-size:.9em;margin:0;padding:0 0 3px 0;}
+.grid li a {position:relative; font-size: 14px;}
+.grid li a span {position:absolute;bottom:20%;right:1%;color:#fff;font-size:.8em;font-weight:600;padding:0 2px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:rgb(23,25,28);background:rgba(23,25,28,.5);}
+
+ul#listColumns {float:left;width:100%;min-width:1000px;margin:0 0 30px 0;padding:0 0 10px 0;list-style:none;text-align:left;}
+ul#listColumns li {background-image:none;position:relative;float:left;width:45%;margin:0 20px 0 0;padding:0 .5em .5em 0;}
+ul#listColumns li#search {position:relative;float:left;width:45%;margin:20px 20px 0 0;padding:0 .5em .5em 0;}
+ul#listColumns li#browse {position:relative;float:right;width:45%;margin:0;padding:17px 0 .5em 0;}
+ul#block {float:left;width:100%;min-width:1000px;margin:0;padding:0;list-style:none;text-align:left;}
+ul#block li {display:inline;display:inline-block;width:28%;margin:0;padding:10px;border-bottom:2px solid #f2f2f2;}
+
+ul.object {float:left;width:100%;margin:10px 0 15px 0;padding:5px 0 0 5px;list-style:none;text-align:left;}
+ul.object li.play {display:inline;display:inline-block;position:relative;float:left;width:25%;margin:0 10px 0 0;padding:0;}
+ul.object li.info {font-size: 1em;display:inline;display:inline-block;position:relative;float:left;width:35%;margin:0;padding:0 10px 0 0;}
+.info a[title] {font-size:1.3em;font-weight:bold;}
+ul.object li.social {display:inline;display:inline-block;position:relative;float:left;width:35%;margin:0;padding:0 10px 0 0;}
+ul.object li p {font-size:.85em;margin:0 0 0 15px;padding:2px 0 0 0;}
+
+ul.item {display:table;list-style:none;margin:15px 0 0 0;padding:0;border-spacing:0;}
+ul.item li {display:table-row;padding:0;margin:0;}
+ul.item li.item-play {display:table-cell;vertical-align:top;width:42%;margin:0;padding:0;}
+ul.item li.item-info {display:table-cell;vertical-align:top;width:33%;margin:0;padding:0 10px;}
+ul.item li.item-social {display:table-cell;vertical-align:top;width:20%;margin:0;padding:0;}
+ul.item li.item-social p {padding-bottom:0;}
+/* =footer
+----------------------------------------------- */

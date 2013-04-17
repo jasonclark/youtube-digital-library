@@ -1,0 +1,3 @@
+metadata archive routine
+
+#wget --no-check-certificate -O _msu-channel-meta-archive.json 'https://gdata.youtube.com/feeds/api/videos?author=msulibrary&orderby=published&start-index=1&max-results=50&prettyprint=true&alt=json&v=2' 'https://gdata.youtube.com/feeds/api/videos?author=msulibrary&orderby=published&start-index=51&max-results=50&prettyprint=true&alt=json&v=2'
