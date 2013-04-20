@@ -3,9 +3,9 @@
 Based on https://developers.google.com/youtube/2.0/developers_guide_protocol*/ 
 
 //set default value for developer key
-$key = isset($_GET['key']) ? $_GET['key'] : 'AI39si42I3ISyPvJOqooURFnY79c6NxDYWZFi3Y6rlI6LwoMMsm5uqtnSDsa-htnzN7QyzMktlLcJe8mMQGhgQz34zt6ROzSiw';
+$key = isset($_GET['key']) ? $_GET['key'] : '{YOUR_API_KEY_HERE}';
 //set default value for user, page will show this user's videos
-$user = isset($_GET['user']) ? strip_tags(htmlentities($_GET['user'])) : 'msulibrary';
+$user = isset($_GET['user']) ? strip_tags(htmlentities($_GET['user'])) : '{YOUR_YOUTUBE_USERNAME_HERE}';
 //set default value for API version
 $version = isset($_GET['v']) ? strip_tags((int)$_GET['v']) : '2';
 //set default value for video format
