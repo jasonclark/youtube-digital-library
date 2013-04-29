@@ -18,10 +18,12 @@ h2.mainHeading strong {padding:2px 5px;background-color:#ffff66;}
 /* =forms
 ----------------------------------------------- */
 form label {cursor:pointer;font-size:1.3em;color:#2b4268;padding:10px 0 0 0;margin:0;}
-fieldset {border:none;}
-input, select, textarea {width:25em;font:1.0em verdana,arial,sans-serif;padding:3px;margin:3px;border:1px solid gray;border-color:#AAA #DDD #DDD #AAA;}
-form#searchbox {margin:5px 0;border-top:1px solid #ccc;border-right:2px solid #ccc;border-bottom:2px solid #ccc;border-left:1px solid #ccc;background-color:#F2F2F2;text-align:center;}
-input:focus {border:1px #000 solid;}
+input,select {vertical-align:middle;border-width:0;}
+fieldset {border:0 none;}
+form#searchBox {font-size:small;position:relative;width:90%;height:32px;background-color:#fff;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+#searchBox label {display:none;}
+#searchBox input {position:absolute;top:3px;left:0;margin:0 3px;padding:0;width:90%;line-height:25px;height:25px;font-size:1.4em;border:0;-webkit-appearance:none;background-color:#fff;outline:none;color:#999;}
+#searchBox button {position:absolute;top:0;right:0;cursor:pointer;margin:0;padding:0;width:30px;height:30px;float:left;background: url('../img/search.gif') no-repeat 50% 50%;text-indent:-999em;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
 form#embedForm {margin:0;padding:0;width:100%;}
 form#embedForm label {font-size:.9em;color:#333;padding-top:0;}
 form#embedForm input {width:100%;font-size:.75em;}

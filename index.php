@@ -33,10 +33,12 @@ $result = json_decode($request);
 ?>
     <ul id="listColumns">
 		<li id="search">
-        <form id="searchBox" method="get" action="./search.php">
-            <!-- <label for="q" class="overlabel">Search</label> -->
-            <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="Search..." onclick="if (this.value == 'Search...') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Search...'; }" />
-            <button type="submit" class="button">Search</button>
+        <form id="searchBox" method="get" action="./search.php"> 
+        <fieldset> 
+        <label for="q">Search</label> 
+        <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="Search..." placeholder="Search..." onclick="if (this.value == 'Search...') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Search...'; }" /> 
+        <button type="submit" class="button">Search</button> 
+        </fieldset> 
         </form>
 		</li>
 		<li id="browse">
