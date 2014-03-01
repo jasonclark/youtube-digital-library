@@ -21,14 +21,19 @@ ForceType application/x-httpd-php
   ForceType application/octet-stream
   #Header set Content-Disposition attachment
 </Files>
+
 #make sure mod_rewrite is enabled for all rules below
 Options +FollowSymLinks
 RewriteEngine On
+
+#check for 200 header, legitimate url 
 RewriteCond %{ENV:REDIRECT_STATUS} 200
-#remove need to have .php extension in filename
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ $1.php [NC,QSA]
+RewriteRule .* - [L]
+
 #change www.lib.montana.edu/channel/item.php?id=5 to www.lib.montana.edu/channel/item/5
 RewriteBase /channel/
-RewriteRule ^item/([-a-zA-Z0-9_-]+) item.php?id=$1 [NC,QSA]
+RewriteRule item/([-_a-zA-Z0-9]+) item.php?id=$1 [L,QSA]
+
+#remove need to have .php extension in filename
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]
