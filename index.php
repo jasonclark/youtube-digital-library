@@ -27,6 +27,12 @@ $feedURL = 'http://gdata.youtube.com/feeds/api/users/'.$user.'/uploads?v='.$vers
 //call API and get data
 $request = file_get_contents($feedURL);
 
+if ($request === FALSE) {
+	//API call failed, display message to user
+	echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+	exit(); 		
+}
+
 //create json object(s) out of response from API; set to "true" to turn response into an array
 //$result = json_decode($request,true);
 $result = json_decode($request);
@@ -36,7 +42,7 @@ $result = json_decode($request);
         <form id="searchBox" method="get" action="./search.php"> 
         <fieldset> 
         <label for="q">Search</label> 
-        <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="Search..." placeholder="Search..." onclick="if (this.value == 'Search...') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Search...'; }" /> 
+        <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="Search..." placeholder="Search..." onClick="if (this.value == 'Search...') { this.value = ''; }" onBlur="if (this.value == '') { this.value = 'Search...'; }" /> 
         <button type="submit" class="button">Search</button> 
         </fieldset> 
         </form>
@@ -50,6 +56,12 @@ $result = json_decode($request);
 		
 		//call API and get playlist titles and ids
 		$requestSubjects = file_get_contents($setBrowsePoints);
+		
+		if ($requestSubjects === FALSE) {
+			// API call failed, display message to user
+			echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+			exit(); 		
+		}
 
 		//create json object(s) out of response from API; set to "true" to turn response into an array
 		//$result = json_decode($request,true);

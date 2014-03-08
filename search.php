@@ -45,6 +45,12 @@ $feedURL = 'http://gdata.youtube.com/feeds/api/videos?v='.$version.'&format='.$f
 //call API and get data
 $request = file_get_contents($feedURL);
 
+if ($request === FALSE) {
+	//API call failed, display message to user
+	echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+	exit(); 		
+}
+
 //create json object(s) out of response from API; set to "true" to turn response into an array
 //$result = json_decode($request,true);
 $result = json_decode($request);

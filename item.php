@@ -18,6 +18,12 @@ $feedURL = 'http://gdata.youtube.com/feeds/api/videos/'.$id.'?v='.$version.'&alt
 
 //call API and get data
 $request = file_get_contents($feedURL);
+
+if ($request === FALSE) {
+	//API call failed, display message to user
+	echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+	exit(); 		
+}
 //create json object(s) out of response from API; set to "true" to turn response into an array
 //$result = json_decode($request,true);
 $result = json_decode($request);
@@ -85,7 +91,7 @@ $pageTitle = $title.', Digital Library: Browse Individual Video';
                     </p>
                     <p>
                     <!-- AddThis Button BEGIN -->
-                    <script type="text/javascript">var addthis_pub = "jaclark"; var addthis_options = "favorites,delicious,twitter,facebook,myspace,google,yahoobkm,friendfeed,more";var addthis_offset_top = -15;addthis_caption_share="Bookmark and share";</script><a class="share" href="http://www.addthis.com/bookmark.php" onclick="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()">Bookmark and share</a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+                    <script type="text/javascript">var addthis_pub = "jaclark"; var addthis_options = "favorites,delicious,twitter,facebook,myspace,google,yahoobkm,friendfeed,more";var addthis_offset_top = -15;addthis_caption_share="Bookmark and share";</script><a class="share" href="http://www.addthis.com/bookmark.php" onClick="return addthis_open(this, '', '[URL]', '[TITLE]')" onMouseOut="addthis_close()">Bookmark and share</a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
                     <!-- AddThis Button END -->
                     </p>
 					<p><a class="watch" itemprop="discussionUrl" title="link to <?php echo $title; ?>" href="<?php echo $watch; ?>">Watch item on YouTube</a></p>

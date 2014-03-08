@@ -27,6 +27,12 @@ if (is_null($subject)) {
 //call API and get data
 $request = file_get_contents($feedURL);
 
+if ($request === FALSE) {
+	//API call failed, display message to user
+	echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+	exit(); 		
+}
+
 //create json object(s) out of response from API
 $result = json_decode($request);
 
