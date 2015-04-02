@@ -42,7 +42,7 @@ $result = json_decode($request);
         <form id="searchBox" method="get" action="./search.php"> 
         <fieldset> 
         <label for="q">Search</label> 
-        <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="Search..." placeholder="Search..." onClick="if (this.value == 'Search...') { this.value = ''; }" onBlur="if (this.value == '') { this.value = 'Search...'; }" /> 
+        <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="" placeholder="Search..." autofocus /> 
         <button type="submit" class="button">Search</button> 
         </fieldset> 
         </form>
