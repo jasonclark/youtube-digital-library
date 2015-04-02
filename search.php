@@ -81,19 +81,18 @@ foreach ($result->data->items as $item) {
 	$duration = gmdate('H:i:s', intval($item->duration));
 ?>
 <ul class="object">
-				<li class="play">
-					<a title="<?php echo $description; ?>" href="./item.php?id=<?php echo $id; ?>"><img width="120" height="90" src="<?php echo $image; ?>" alt="<?php echo $description; ?>" /></a>
-				</li>
-				<li class="info">
-					<p><a title="<?php echo $title; ?>" href="<?php echo './item.php?id='.$id.''; ?>"><?php echo $title; ?></a></p>
-					<p><?php echo $description; ?></p>
-					
-				</li>
-				<li class="social">
-					<p>View(s): <?php echo $viewCount; ?></p>
-					<p>Uploaded: <?php echo $uploaded; ?></p>
-					<p>Duration: <?php echo $duration ?></p>
-				</li>
+  <li class="play">
+    <a title="<?php echo $description; ?>" href="./item.php?id=<?php echo $id; ?>"><img width="120" height="90" src="<?php echo $image; ?>" alt="<?php echo $description; ?>" /></a>
+  </li>
+  <li class="info">
+    <p><a title="<?php echo $title; ?>" href="<?php echo './item.php?id='.$id.''; ?>"><?php echo $title; ?></a></p>
+    <p><?php echo $description; ?></p>		
+  </li>
+  <li class="social">
+    <p>View(s): <?php echo $viewCount; ?></p>
+    <p>Uploaded: <?php echo $uploaded; ?></p>
+    <p>Duration: <?php echo $duration ?></p>
+  </li>
 </ul>    
 <?php
 }
