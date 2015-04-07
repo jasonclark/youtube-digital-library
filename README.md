@@ -4,4 +4,4 @@ MSU Library has created a digital video library using the Youtube API to power o
 
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
 
-Copyright 2013, [Jason A. Clark](www.jasonclark.info)
+Copyright 2013, [Jason A. Clark](http://www.jasonclark.info)
