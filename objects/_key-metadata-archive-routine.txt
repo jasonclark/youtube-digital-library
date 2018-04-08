@@ -1,3 +1,4 @@
-metadata archive routine
+#metadata archive routine
 
-#wget --no-check-certificate -O _msu-channel-meta-archive.json 'https://gdata.youtube.com/feeds/api/videos?author=msulibrary&orderby=published&start-index=1&max-results=50&prettyprint=true&alt=json&v=2' 'https://gdata.youtube.com/feeds/api/videos?author=msulibrary&orderby=published&start-index=51&max-results=50&prettyprint=true&alt=json&v=2'
+wget --no-check-certificate -O _msu-channel-meta-archive.json 'https://www.googleapis.com/youtube/v3/search?key=ADD-YOUR-API-KEY-HERE&part=id,snippet&channelId=ADD-YOUR-CHANNEL-ID-HERE&maxResults=50&order=date' 'https://www.googleapis.com/youtube/v3/search?key=ADD-YOUR-API-KEY-HERE&part=id,snippet&channelId=ADD-YOUR-CHANNEL-ID-HERE&maxResults=50&pageToken=CDIQAA&order=date' 'https://www.googleapis.com/youtube/v3/search?key=ADD-YOUR-API-KEY-HERE&part=id,snippet&channelId=ADD-YOUR-CHANNEL-ID-HERE&maxResults=50&pageToken=CGQQAA&order=date'
+
