@@ -4,11 +4,12 @@ Version:  flexible layout 1.0 -  April 2013
 ----------------------------------------------- */
 /* =global default settings
 ----------------------------------------------- */
-* {margin:0;padding:0;}
-* {-moz-box-sizing: border-box;-webkit-box-sizing:border-box;box-sizing: border-box;}
-html {overflow-y:scroll;}
-body {background:#fff;color:#666;font:100%/1.5 'Gill Sans', 'Droid Sans', 'Calibri', 'Lucida Grande', 'Trebuchet MS', 'Helvetica Neue', 'Arial', sans-serif;}
-
+html {box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+*,:before,:after {box-sizing: inherit;}
+html,body {font-style:normal;font-variant:normal;font-stretch:normal;font-size:/*18px*/100%;line-height:1.5;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+color:#333;-webkit-font-smoothing:antialiased;font-weight:400;width:100%;height:100%;margin:0;padding:0;background-color:#fff;
+}
 /* =element-specific settings
 ----------------------------------------------- */
 h2.mainHeading strong {padding:2px 5px;background-color:#ffff66;}
@@ -28,7 +29,7 @@ form#embedForm {margin:0;padding:0;width:100%;}
 form#embedForm label {font-size:.9em;color:#333;padding-top:0;}
 form#embedForm input {width:100%;font-size:.75em;border:1px solid #ddd;}
 input, select {vertical-align:middle;}
-input.submit {width:10em;font:bold .95em verdana,arial,sans-serif;background:#6A7389;color:#fff;padding:1px 2px;margin:0 0 2px 0;border:1px solid #283043;border-color:#9097A2 #283043 #283043 #9097A2;}
+input.submit {width:10em;font:bold .95em Roboto,sans-serif;background:#6A7389;color:#fff;padding:1px 2px;margin:0 0 2px 0;border:1px solid #283043;border-color:#9097A2 #283043 #283043 #9097A2;}
 form#adminForm p.button {padding:5px 0 0 0;}
 /* =global nav pill tabs
 ----------------------------------------------- */
